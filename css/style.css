@@ -411,6 +411,39 @@ body {
     }
 }
 
+@media screen and (max-width: 425px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .home {
+        display: grid;
+        grid-template-columns: 100%;
+        margin-top: 2rem;
+        grid-template-areas: 
+        "intro" 
+        "img"
+        "call";
+    }
+
+    .home .intro_content {
+        text-align: center;
+    }
+
+    .home img {
+        padding-top: 2rem;
+        margin: 0 auto;
+    }
+
+    .home .call {
+        text-align: center;
+        padding: 2rem 0 2rem 0;
+    }
+}
 
 
 
