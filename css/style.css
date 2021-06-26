@@ -357,17 +357,31 @@ body {
 
     .navbar {
         display: none;
-        transition: 6s;
+    }
+
+    @keyframes entrada_menu {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0.5;
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
 
     .navbar.active {
+        animation: entrada_menu .15s;
         display: flex;
         height: 100vh;
         position: absolute;
-        top: 0;
-        left: 0;
         background: #FAFAFA;
         z-index: 10;
+        overflow: hidden;
+        margin-top: 40px;
     }
 
     .navbar.active .archive_btn {
