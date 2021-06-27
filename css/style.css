@@ -91,11 +91,11 @@ body {
     top: 0;
     left: 0;
     display: none;
+    padding-top: 1rem;
 }
 
 .menu_hamburguer {
     fill: #FB5D64;
-    margin: 1rem 0;
 }
 
 /* ANIMAÇÃO NAVBAR-ITEM */
