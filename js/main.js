@@ -2,6 +2,7 @@
 
 new SimpleAnime();
 // TypeWrite Titulo
+
 function typeWriter(element) {
     const textArray = element.innerHTML.split('');
     element.innerHTML = '';
@@ -11,7 +12,10 @@ function typeWriter(element) {
 }
 
 const titulo = document.querySelector('.title');
-typeWriter(titulo);
+
+if(titulo){
+    typeWriter(titulo);
+}
 
 // Loading
 
