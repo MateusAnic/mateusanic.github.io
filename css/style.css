@@ -95,7 +95,7 @@ body {
 
 .menu_hamburguer {
     fill: #FB5D64;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 /* ANIMAÇÃO NAVBAR-ITEM */
@@ -346,6 +346,10 @@ body {
 @media screen and (max-width: 768px){
     .grid-container {
         grid-template-columns: repeat(12, 33.33px);
+    }
+
+    .home {
+        padding: 4rem 0 2rem 0;
     }
 
     /* NAVBAR MOBILE */
