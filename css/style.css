@@ -15,7 +15,6 @@ body {
     background: #FAFAFA;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 
@@ -23,8 +22,8 @@ body {
 .loading {
     position: absolute;
     background: transparent;
-    max-height: 100%;
-    max-width: 100%;
+    min-height: 100%;
+    min-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,21 +51,25 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 75px);
     column-gap: 20px;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     position: relative;
+    grid-template-areas: 
+    "navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar"
+    "conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
 }
 
 /* NAVBAR */
 
 .navbar {
-    width: 100%;
-    margin: 0 auto;
+    grid-column: 1/-4;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 4rem;
-    grid-column: 1 / -1;
+    grid-area: navbar;
 }
 
 .navbar ul {
@@ -75,6 +78,7 @@ body {
     margin: 0 auto;
     display: inline-flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .navbar ul li a{
@@ -113,9 +117,21 @@ body {
   transition: all .4s ease-in-out;
 }
 
-.navbar ul li .a_left .select::before, .navbar ul li .a_left:hover::before {
+.navbar ul li .a_left:hover::before {
     visibility: visible;
     transform: scaleX(1);
+}
+
+.navbar ul .select::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #ECC953;
+    transform: scaleX(1);
+    transition: all .4s ease-in-out;
 }
 
 .archive_btn {
@@ -146,12 +162,13 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 178px;
-    margin-top: 2rem;
     grid-template-areas: 
     "intro img" 
     "call call";
     align-items: center;
     justify-content: space-between;
+    grid-area: conteudo;
+    padding: 2rem 0;
 }
 
 .home .intro_content {
@@ -206,7 +223,7 @@ body {
     margin: 0 auto;
     font-size: 1rem;
     font-weight: 400;
-    padding: 4rem 0 2rem 0;
+    padding: 4rem 0 4rem 0;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -264,14 +281,13 @@ body {
 
 .footer {
     width: 100%;
-    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 4rem;
-    grid-column: 1 / -1;
+    grid-area: footer;
     position: absolute;
-    bottom: 0;
+    bottom: 1rem;
+    
 }
 
 .footer .social_list {
@@ -348,9 +364,6 @@ body {
         grid-template-columns: repeat(12, 33.33px);
     }
 
-    .home {
-        padding: 4rem 0 2rem 0;
-    }
 
     /* NAVBAR MOBILE */
 
@@ -380,12 +393,18 @@ body {
     .navbar.active {
         animation: entrada_menu .15s;
         display: flex;
-        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        min-height: 100vh;
         position: absolute;
         background: #FAFAFA;
         z-index: 10;
-        overflow: hidden;
-        margin-top: 40px;
+
     }
 
     .navbar.active .archive_btn {
@@ -408,7 +427,6 @@ body {
     }
 
     .home {
-        margin-top: 8rem;
         column-gap: .5rem;
     }
 
@@ -431,17 +449,19 @@ body {
 
 @media screen and (max-width: 425px){
     .grid-container {
-        display: grid;
-        grid-template-columns: 100%;
+        grid-template-columns: 1fr;
         justify-content: center;
         align-items: center;
-        position: relative;
+        grid-template-columns: 
+        "navbar"
+        "conteudo"
+        "footer";
     }
 
     .home {
         display: grid;
         grid-template-columns: 100%;
-        margin-top: 2rem;
+        margin-top: 0;
         grid-template-areas: 
         "intro" 
         "img"
@@ -450,6 +470,7 @@ body {
 
     .home .intro_content {
         text-align: center;
+        margin: 0 auto;
     }
 
     .home .intro_content h1 {
