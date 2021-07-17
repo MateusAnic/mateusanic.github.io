@@ -1,8 +1,14 @@
-const listType = document.querySelectorAll('.a_type');
+// Menu Selector
 
-listType.forEach((element) => {
-    element.addEventListener("click", function(){
-        element.classList.add("selected");
-    })
-})
-console.log(listType)
+const menuItems = document.querySelectorAll(".item_menu")
+
+function onItemClick(item) {
+    menuItems.forEach(function(element){
+        if(element.classList.contains("selected")){
+            element.classList.remove("selected");
+            element.classList.add("disable");
+        }
+    });
+    item.classList.add("selected");
+    item.classList.remove("disable");
+}
