@@ -223,7 +223,7 @@ body {
     margin: 0 auto;
     font-size: 1rem;
     font-weight: 400;
-    padding: 4rem 0 4rem 0;
+    padding-top: 4rem;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -285,8 +285,8 @@ body {
     justify-content: center;
     align-items: center;
     grid-area: footer;
-    position: absolute;
-    bottom: 1rem;
+    position: relative;
+    height: 4rem;
     
 }
 
