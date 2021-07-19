@@ -9,20 +9,23 @@
     <!--Main Style-->
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Home</title>
+    <link rel="stylesheet" href="css/projetos.css">
+    <link rel="stylesheet" href="css/sobre.css">
+    <link rel="stylesheet" href="css/contato.css">
+    <title>Contato</title>
 </head>
 <body>
     <div class="loading">
         <div class="loader" data-icon="ei-spinner-3" data-size="l"></div>
     </div>
-    <div class="grid-container main">
+    <div class="grid-container contact">
         <div class="nav-hamb fadeInDown" data-anime="200">
             <div class="menu_hamburguer" data-icon="ei-navicon" data-size="m"></div>
         </div>
         <nav class="navbar fadeInDown" data-anime="200">
             <ul>
                 <li>
-                    <a class="a_left select" href="index.html">Home</a>
+                    <a class="a_left" href="index.html">Home</a>
                 </li>
                 <li>
                     <a class="a_left" href="projetos.html">Portfólio</a>
@@ -31,19 +34,26 @@
                     <a class="a_left" href="sobre.html">Sobre</a>
                 </li>
                 <li>
-                    <a class="a_left" href="contato.html">Contato</a>
+                    <a class="a_left select" href="contato.html">Contato</a>
                 </li>
             </ul>
         </nav>
-        <main class="home" id="home">
-            <div class="intro_content">
-                <h1 class="title fadeInLeft" data-anime="200">Olá, meu nome é Mateus! Sou desenvolvedor Front-End e UX/UI Designer.</h1>
-                <h2 class="fadeInLeft" data-anime="600">Tem alguma idéia em mente? Vamos conversar<a href="contato.html"><span data-icon="ei-chevron-right" data-size="s" class="chevron_icon"></span></a></h2>
-            </div>
-                <img src="img/img1.svg" alt="Smartphone User Interface Image" data-anime="800" class="fadeInUp">
-                <h2 class="call fadeInUp" data-anime="800">Conheça meu trabalho<a href="projetos.html"><span data-icon="ei-chevron-right" data-size="s" class="chevron_icon"></a></span></h2>
-        </main>
-        <footer class="footer" data-anime="1200">
+        <section id="contato" class="contato">
+           <div class="content_contato">
+               <h1>Vamos entrar em contato</h1>
+               <p>Não importa se você quer apenas um bate-papo ou solicitar um projeto de design, fique à vontade para me chamar nas redes sociais ou através dos meus dados de contato.</p>
+           </div>
+           <form action="" class="form_contato" id="form_contato">
+               <label for="nome">Nome</label>
+               <input type="text" id="nome" name='nome' required>
+               <label for="email">Email</label>
+               <input type="text" id="nome" name='nome' required>
+               <label for="mensagem">Mensagem</label>
+               <textarea name="mensagem" id="mensagem" required></textarea>
+               <button id="enviar" name="enviar" type="submit">Enviar</button>
+           </form>
+        </section>
+        <footer class="footer" data-anime="800">
             <ul class="social_list">
                 <li class="social_item">
                     <a href="https://github.com/MateusAnic" target="_blank" >
@@ -64,5 +74,6 @@
     </div>
     <script src="js/animate.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/projetos.js"></script>
 </body>
 </html>

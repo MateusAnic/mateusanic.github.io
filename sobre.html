@@ -9,41 +9,43 @@
     <!--Main Style-->
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Home</title>
+    <link rel="stylesheet" href="css/projetos.css">
+    <link rel="stylesheet" href="css/sobre.css">
+    <title>Sobre</title>
 </head>
 <body>
     <div class="loading">
         <div class="loader" data-icon="ei-spinner-3" data-size="l"></div>
     </div>
-    <div class="grid-container main">
+    <div class="grid-container about">
         <div class="nav-hamb fadeInDown" data-anime="200">
             <div class="menu_hamburguer" data-icon="ei-navicon" data-size="m"></div>
         </div>
         <nav class="navbar fadeInDown" data-anime="200">
             <ul>
                 <li>
-                    <a class="a_left select" href="index.html">Home</a>
+                    <a class="a_left" href="index.html">Home</a>
                 </li>
                 <li>
                     <a class="a_left" href="projetos.html">Portfólio</a>
                 </li>
                 <li>
-                    <a class="a_left" href="sobre.html">Sobre</a>
+                    <a class="a_left select" href="sobre.html">Sobre</a>
                 </li>
                 <li>
                     <a class="a_left" href="contato.html">Contato</a>
                 </li>
             </ul>
         </nav>
-        <main class="home" id="home">
-            <div class="intro_content">
-                <h1 class="title fadeInLeft" data-anime="200">Olá, meu nome é Mateus! Sou desenvolvedor Front-End e UX/UI Designer.</h1>
-                <h2 class="fadeInLeft" data-anime="600">Tem alguma idéia em mente? Vamos conversar<a href="contato.html"><span data-icon="ei-chevron-right" data-size="s" class="chevron_icon"></span></a></h2>
+        <section id="sobre" class="sobre">
+            <img src="img/foto_about.png" class="fadeInLeft" alt="Foto Mateus" data-anime="200">
+            <div class="about_content">
+                <h4 data-anime="400">MATEUS HENRIQUE LIMA ANICETO</h4>
+                <h1 data-anime="400">UI Designer And Front End Developer</h1>
+                <p data-anime="400">Sou um desenvolvedor Front-end brasileiro de categoria júnior. Sempre me interessei por design e, trabalhar a criatividade com o uso tecnologia foi um caminho que escolhi para me sustentar com algo que sinto prazer em fazer.</p>
             </div>
-                <img src="img/img1.svg" alt="Smartphone User Interface Image" data-anime="800" class="fadeInUp">
-                <h2 class="call fadeInUp" data-anime="800">Conheça meu trabalho<a href="projetos.html"><span data-icon="ei-chevron-right" data-size="s" class="chevron_icon"></a></span></h2>
-        </main>
-        <footer class="footer" data-anime="1200">
+        </section>
+        <footer class="footer" data-anime="800">
             <ul class="social_list">
                 <li class="social_item">
                     <a href="https://github.com/MateusAnic" target="_blank" >
@@ -64,5 +66,6 @@
     </div>
     <script src="js/animate.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/projetos.js"></script>
 </body>
 </html>
