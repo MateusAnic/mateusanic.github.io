@@ -56,7 +56,7 @@ body {
     align-items: center;
     position: relative;
     grid-template-areas: 
-    "navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar"
+    "navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar" 
     "conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo"
     "footer footer footer footer footer footer footer footer footer footer footer footer";
 }
@@ -73,8 +73,8 @@ body {
 }
 
 .navbar ul {
-    width: 450px;
-    max-width: 450px;
+    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
     display: inline-flex;
     justify-content: space-between;
@@ -287,7 +287,7 @@ body {
     grid-area: footer;
     position: relative;
     height: 4rem;
-    
+    bottom: 1rem;
 }
 
 .footer .social_list {
