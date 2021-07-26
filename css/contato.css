@@ -90,3 +90,83 @@
     letter-spacing: 1px;
     background-color: #FB5D64;
 }
+
+@media screen and (max-width: 1024px){
+    .grid-container {
+        grid-template-columns: repeat(12, 60px);
+    }
+
+    .form_contato input {
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .grid-container {
+        grid-template-columns: repeat(12, 33.33px);
+    }
+
+    .contato {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 6rem;
+        margin-bottom: 9rem;
+        text-align: center;
+    }
+
+    .form_contato input {
+        width: 800px;
+    }
+
+    .content_contato {
+        margin: 0 auto;
+    }
+
+    .content_contato h1{
+        font-size: 3.5rem;
+    }
+
+    .form_contato {
+        text-align: left;
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+
+    .content_contato p {
+        margin-bottom: 2rem;
+
+    }
+
+}
+
+@media screen and (max-width: 425px){
+
+    .grid-container {
+        grid-template-columns: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .projetos {
+        margin-top: 2rem;
+    }
+
+    .grid-projects {
+        grid-template-columns: 100%;
+    }
+
+    .project_item {
+        width: 300px;
+    }
+    
+    .projetos h1 {
+        font-size: 1.5rem;
+    }
+
+    .list_projects {
+        justify-content: space-evenly;
+    }
+
+}
