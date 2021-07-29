@@ -364,7 +364,6 @@ body {
         grid-template-columns: repeat(12, 33.33px);
     }
 
-
     /* NAVBAR MOBILE */
 
     .nav-hamb {
@@ -449,6 +448,7 @@ body {
 
 @media screen and (max-width: 425px){
     .grid-container {
+        min-width: 100%;
         grid-template-columns: 1fr;
         justify-content: center;
         align-items: center;
