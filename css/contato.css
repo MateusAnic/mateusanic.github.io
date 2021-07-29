@@ -18,6 +18,18 @@
     font-size: 4rem;
     color: #FB5D64;
     line-height: 1;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.content_contato h1::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #F5F5F5;
 }
 
 .content_contato p {
@@ -40,7 +52,7 @@
     position: relative;
 }
 
-.form_contato label::after {
+.form_contato label::after{
     content: "";
     width: 90px;
     height: 2px;
@@ -59,6 +71,7 @@
     background-color: #EAEFFF;
     outline: none;
     margin-bottom: 2rem;
+    border-radius: 5px;
 }
 
 
@@ -75,11 +88,12 @@
     height: 256px;
     max-height: 256px;
     resize: none;
+    border-radius: 5px;
 }
 
 .form_contato button {
     margin-top: 2rem;
-    width: 170px;
+    width: 150px;
     height: 4rem;
     border-radius: 50px;
     border: none;
@@ -149,28 +163,16 @@
         overflow-x: hidden;
     }
 
-    .projetos {
-        margin-top: 2rem;
-    }
-
-    .grid-projects {
-        grid-template-columns: 100%;
-    }
-
-    .project_item {
-        width: 300px;
+    .content_contato {
+        padding: 0 3.75rem;
     }
     
-    .projetos h1 {
-        font-size: 1.5rem;
-    }
-
-    .list_projects {
-        justify-content: space-evenly;
+    .content_contato h1 {
+        font-size: 2.5rem;
     }
 
     .form_contato input {
-        width: 400px;
+        max-width: 360px;
     }
 
     .form_contato button {
@@ -180,6 +182,14 @@
 
 @media screen and (max-width: 320px){
     .projetos h1 {
-        font-size: 1rem;
+        font-size: 8px;
+    }
+
+    .form_contato input {
+        max-width: 300px;
+    }
+
+    .form_contato button {
+        max-width: 100px;
     }
 }

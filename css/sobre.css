@@ -32,6 +32,7 @@
     padding-top: 2rem;
     line-height: 24px;
     color: #555555;
+
 }
 
 @media screen and (max-width: 1024px){
@@ -56,10 +57,11 @@
         text-align: center;
         align-items: center;
         justify-content: center;
+        margin: 6rem 0;
     }
 
     .about_content {
-        padding-top: 4rem;
+        padding-top: 8rem;
     }
 
     .about_content h1 {
@@ -68,7 +70,7 @@
     }
 
     .about_content p {
-        text-align: left;
+        text-align: center;
     }
 }
 
@@ -86,7 +88,7 @@
     }
 
     .about_content p {
-        width: 360px;
+        width: 405px;
         margin: 0 auto;
         text-align: center;
     }
@@ -105,8 +107,7 @@
     }
 
     .about_content p {
-        width: 300px;
-        margin: 0 auto;
+        max-width: 300px;
+        font-size: 14.5px;
     }
-
 }
