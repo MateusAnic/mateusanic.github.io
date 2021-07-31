@@ -89,12 +89,29 @@
 .project_item {
     width: 360px;
     height: 256px;
-    background: #FFF;
     border: 1px solid #FAFAFA;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    position: relative;
+    transition: .6s;
+}
+
+.project_item:hover {
+    transform: scale(1.2);
+    z-index: 999;
+}
+
+.project_item img {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: -2;
+
 }
 
 .project_hover {
